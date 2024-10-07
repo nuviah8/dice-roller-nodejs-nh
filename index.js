@@ -17,7 +17,7 @@ app.use(cors({ origin: '*' }))
 // Dice Roller
 app.get('/diceroller', (request, response) => {
     console.log('Calling "/diceroller" on the Node.js server.');
-	const randomNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
+	const randomNumber = Math.floor(Math.random() * 6) + 1; // Random number between 1 and 6
 	console.log('Dice Number:', randomNumber )
 	response.json({ randomNumber }); // Send as JSON response
 });
